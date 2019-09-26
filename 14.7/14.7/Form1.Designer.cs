@@ -78,6 +78,7 @@
             this.greenButton.Text = "Green";
             this.greenButton.UseVisualStyleBackColor = true;
             this.greenButton.CheckedChanged += new System.EventHandler(this.ColorCheckChanged);
+
             // 
             // blueButton
             // 
@@ -172,7 +173,7 @@
             this.Controls.Add(this.sizeGroupBox);
             this.Controls.Add(this.colorGroupBox);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Budget Paint";
             this.Load += new System.EventHandler(this.Resize_Form);
             this.SizeChanged += new System.EventHandler(this.Resize_Form);
             this.colorGroupBox.ResumeLayout(false);

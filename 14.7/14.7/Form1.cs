@@ -32,13 +32,14 @@ namespace _14._7
             drawingPanel.Left = (int)(formWidth * 0.2);
             drawingPanel.Width = (int)(formWidth*0.73);
 
-            int formHeight = this.Height;
+            int effectiveFormHeight = this.ClientSize.Height;
 
-            drawingPanel.Top = (int)(formHeight * 0.05);
-            drawingPanel.Height = (int)(formHeight * 0.8);
+            drawingPanel.Top = (int)(effectiveFormHeight * 0.05);
+            drawingPanel.Height = (int)(effectiveFormHeight * 0.9);
             
     
         }
+
 
         private void MouseDownDraw(object sender, MouseEventArgs e)
         {
