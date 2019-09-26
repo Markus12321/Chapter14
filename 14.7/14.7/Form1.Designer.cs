@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.colorGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.blackButton = new System.Windows.Forms.RadioButton();
+            this.greenButton = new System.Windows.Forms.RadioButton();
+            this.blueButton = new System.Windows.Forms.RadioButton();
+            this.redButton = new System.Windows.Forms.RadioButton();
             this.sizeGroupBox = new System.Windows.Forms.GroupBox();
+            this.largeButton = new System.Windows.Forms.RadioButton();
+            this.mediumButton = new System.Windows.Forms.RadioButton();
+            this.smallButton = new System.Windows.Forms.RadioButton();
             this.drawingPanel = new System.Windows.Forms.Panel();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.colorGroupBox.SuspendLayout();
             this.sizeGroupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // colorGroupBox
             // 
-            this.colorGroupBox.Controls.Add(this.radioButton4);
-            this.colorGroupBox.Controls.Add(this.radioButton3);
-            this.colorGroupBox.Controls.Add(this.radioButton2);
-            this.colorGroupBox.Controls.Add(this.radioButton1);
+            this.colorGroupBox.Controls.Add(this.blackButton);
+            this.colorGroupBox.Controls.Add(this.greenButton);
+            this.colorGroupBox.Controls.Add(this.blueButton);
+            this.colorGroupBox.Controls.Add(this.redButton);
             this.colorGroupBox.Location = new System.Drawing.Point(51, 27);
             this.colorGroupBox.Name = "colorGroupBox";
             this.colorGroupBox.Size = new System.Drawing.Size(137, 167);
@@ -55,61 +55,100 @@
             this.colorGroupBox.TabStop = false;
             this.colorGroupBox.Text = "Color";
             // 
-            // radioButton4
+            // blackButton
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(19, 122);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(52, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Black";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.blackButton.AutoSize = true;
+            this.blackButton.Checked = true;
+            this.blackButton.Location = new System.Drawing.Point(19, 122);
+            this.blackButton.Name = "blackButton";
+            this.blackButton.Size = new System.Drawing.Size(52, 17);
+            this.blackButton.TabIndex = 3;
+            this.blackButton.TabStop = true;
+            this.blackButton.Text = "Black";
+            this.blackButton.UseVisualStyleBackColor = true;
+            this.blackButton.CheckedChanged += new System.EventHandler(this.ColorCheckChanged);
             // 
-            // radioButton3
+            // greenButton
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(19, 89);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(54, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Green";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.greenButton.AutoSize = true;
+            this.greenButton.Location = new System.Drawing.Point(19, 89);
+            this.greenButton.Name = "greenButton";
+            this.greenButton.Size = new System.Drawing.Size(54, 17);
+            this.greenButton.TabIndex = 2;
+            this.greenButton.Text = "Green";
+            this.greenButton.UseVisualStyleBackColor = true;
+            this.greenButton.CheckedChanged += new System.EventHandler(this.ColorCheckChanged);
             // 
-            // radioButton2
+            // blueButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(19, 54);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(46, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Blue";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.blueButton.AutoSize = true;
+            this.blueButton.Location = new System.Drawing.Point(19, 54);
+            this.blueButton.Name = "blueButton";
+            this.blueButton.Size = new System.Drawing.Size(46, 17);
+            this.blueButton.TabIndex = 1;
+            this.blueButton.TabStop = true;
+            this.blueButton.Text = "Blue";
+            this.blueButton.UseVisualStyleBackColor = true;
+            this.blueButton.CheckedChanged += new System.EventHandler(this.ColorCheckChanged);
             // 
-            // radioButton1
+            // redButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(19, 19);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(45, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Red";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.redButton.AutoSize = true;
+            this.redButton.Location = new System.Drawing.Point(19, 19);
+            this.redButton.Name = "redButton";
+            this.redButton.Size = new System.Drawing.Size(45, 17);
+            this.redButton.TabIndex = 0;
+            this.redButton.TabStop = true;
+            this.redButton.Text = "Red";
+            this.redButton.UseVisualStyleBackColor = true;
+            this.redButton.CheckedChanged += new System.EventHandler(this.ColorCheckChanged);
             // 
             // sizeGroupBox
             // 
-            this.sizeGroupBox.Controls.Add(this.radioButton7);
-            this.sizeGroupBox.Controls.Add(this.radioButton6);
-            this.sizeGroupBox.Controls.Add(this.radioButton5);
+            this.sizeGroupBox.Controls.Add(this.largeButton);
+            this.sizeGroupBox.Controls.Add(this.mediumButton);
+            this.sizeGroupBox.Controls.Add(this.smallButton);
             this.sizeGroupBox.Location = new System.Drawing.Point(51, 212);
             this.sizeGroupBox.Name = "sizeGroupBox";
             this.sizeGroupBox.Size = new System.Drawing.Size(137, 159);
             this.sizeGroupBox.TabIndex = 1;
             this.sizeGroupBox.TabStop = false;
             this.sizeGroupBox.Text = "Size";
+            // 
+            // largeButton
+            // 
+            this.largeButton.AutoSize = true;
+            this.largeButton.Location = new System.Drawing.Point(19, 114);
+            this.largeButton.Name = "largeButton";
+            this.largeButton.Size = new System.Drawing.Size(52, 17);
+            this.largeButton.TabIndex = 6;
+            this.largeButton.Text = "Large";
+            this.largeButton.UseVisualStyleBackColor = true;
+            this.largeButton.CheckedChanged += new System.EventHandler(this.SizeCheckChanged);
+            // 
+            // mediumButton
+            // 
+            this.mediumButton.AutoSize = true;
+            this.mediumButton.Location = new System.Drawing.Point(19, 75);
+            this.mediumButton.Name = "mediumButton";
+            this.mediumButton.Size = new System.Drawing.Size(62, 17);
+            this.mediumButton.TabIndex = 5;
+            this.mediumButton.Text = "Medium";
+            this.mediumButton.UseVisualStyleBackColor = true;
+            this.mediumButton.CheckedChanged += new System.EventHandler(this.SizeCheckChanged);
+            // 
+            // smallButton
+            // 
+            this.smallButton.AutoSize = true;
+            this.smallButton.Checked = true;
+            this.smallButton.Location = new System.Drawing.Point(19, 36);
+            this.smallButton.Name = "smallButton";
+            this.smallButton.Size = new System.Drawing.Size(50, 17);
+            this.smallButton.TabIndex = 4;
+            this.smallButton.TabStop = true;
+            this.smallButton.Text = "Small";
+            this.smallButton.UseVisualStyleBackColor = true;
+            this.smallButton.CheckedChanged += new System.EventHandler(this.SizeCheckChanged);
             // 
             // drawingPanel
             // 
@@ -120,39 +159,9 @@
             this.drawingPanel.Size = new System.Drawing.Size(515, 372);
             this.drawingPanel.TabIndex = 2;
             this.drawingPanel.SizeChanged += new System.EventHandler(this.Resize_Form);
-            // 
-            // radioButton5
-            // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(19, 36);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(50, 17);
-            this.radioButton5.TabIndex = 4;
-            this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Small";
-            this.radioButton5.UseVisualStyleBackColor = true;
-            // 
-            // radioButton6
-            // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(19, 75);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(62, 17);
-            this.radioButton6.TabIndex = 5;
-            this.radioButton6.TabStop = true;
-            this.radioButton6.Text = "Medium";
-            this.radioButton6.UseVisualStyleBackColor = true;
-            // 
-            // radioButton7
-            // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(19, 114);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(52, 17);
-            this.radioButton7.TabIndex = 6;
-            this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Large";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.drawingPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MouseDownDraw);
+            this.drawingPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Draw);
+            this.drawingPanel.MouseUp += new System.Windows.Forms.MouseEventHandler(this.MouseUpNoDraw);
             // 
             // Form1
             // 
@@ -179,13 +188,13 @@
         private System.Windows.Forms.GroupBox colorGroupBox;
         private System.Windows.Forms.GroupBox sizeGroupBox;
         private System.Windows.Forms.Panel drawingPanel;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton blackButton;
+        private System.Windows.Forms.RadioButton greenButton;
+        private System.Windows.Forms.RadioButton blueButton;
+        private System.Windows.Forms.RadioButton redButton;
+        private System.Windows.Forms.RadioButton largeButton;
+        private System.Windows.Forms.RadioButton mediumButton;
+        private System.Windows.Forms.RadioButton smallButton;
     }
 }
 
